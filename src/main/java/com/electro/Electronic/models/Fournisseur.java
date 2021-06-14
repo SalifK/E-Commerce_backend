@@ -1,5 +1,6 @@
 package com.electro.Electronic.models;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -7,21 +8,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
-@Entity
-public class Comment {
-    //user name
+//@Entity
+public class Fournisseur {
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+	private long id;
+	private String nom;
 	private String email;
+	private Date dateContrat, dateFinContrat=null;
+	private String Tel;
 	private String description;
-    private Date date;
-    
-    @ManyToOne
-    @JoinColumn(name="id_client",nullable=false)
-    private Client Client;
-    
-    
+	private String localisation;
+	
+//	@OneToMany(mappedBy="fournisseur")
+//	private Collection<Product> Product;
+	
+	
+	
 }
