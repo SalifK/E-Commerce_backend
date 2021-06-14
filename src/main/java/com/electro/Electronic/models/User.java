@@ -16,7 +16,8 @@ public class User {
     @Column(unique=true)
     private String username;
     private String password;
-    private String role;
+    @Enumerated(EnumType.ORDINAL)
+    private Role role;
     private String email;
     
     @OneToOne(mappedBy="User")
@@ -25,7 +26,12 @@ public class User {
     @OneToOne(mappedBy="User")
  	private Employer Employer;
     
-    public User(String username, String password, String email, String role) {
+    public User() {
+		super();
+	}
+
+
+	public User(String username, String password, String email, Role role) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -64,12 +70,12 @@ public class User {
 	}
 
 
-	public String getRole() {
+	public Role getRole() {
 		return role;
 	}
 
 
-	public void setRole(String role) {
+	public void setRole(Role role) {
 		this.role = role;
 	}
 

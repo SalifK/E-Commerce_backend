@@ -20,7 +20,7 @@ import com.electro.Electronic.services.CategorieService;
 import com.electro.Electronic.models.Categorie;
 @RestController
 
-@RequestMapping(path="api/v1/categorie")
+@RequestMapping(path="api/categorie")
 public class CategorieController {
 
 	private final CategorieService categorieServ;

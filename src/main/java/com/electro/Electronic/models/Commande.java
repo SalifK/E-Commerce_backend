@@ -36,6 +36,10 @@ public class Commande {
 	 	@OneToMany(mappedBy="Commande") 
 	 	private Collection<LigneCommande> LigneCommande ;
 	 	
+		public Commande() {
+			super();
+		}
+
 		public Commande(float montantTotal, Client client) {
 			super();
 			this.montantTotal = montantTotal;

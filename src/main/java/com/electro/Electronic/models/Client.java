@@ -36,6 +36,10 @@ public class Client {
 	@OneToMany(mappedBy="Client") 
  	private Collection<Comment> Comment ;
 	
+	public Client() {
+		super();
+	}
+
 	public Client(long id, String fName, String lName, int numTel, int codePostal, String adressePhysique,
 			String ville, String image) {
 		super();

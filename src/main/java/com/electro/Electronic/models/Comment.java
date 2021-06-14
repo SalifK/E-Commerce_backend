@@ -22,6 +22,16 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name="id_client",nullable=false)
     private Client Client;
+
+	public Comment() {
+		super();
+	}
+
+	public Comment(String email, String description) {
+		super();
+		this.email = email;
+		this.description = description;
+	}
     
     
 }

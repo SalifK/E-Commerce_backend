@@ -10,7 +10,7 @@ import com.electro.Electronic.repositories.CategorieRepository;
 @Configuration
 public class CategorieConfig {
 
-	@Bean
+	@Bean("Categorie")
 	CommandLineRunner CommandeLineRunner(CategorieRepository Repository) {
 		return args->{
 			Categorie c1= new Categorie("TestName","Bla bla bla");

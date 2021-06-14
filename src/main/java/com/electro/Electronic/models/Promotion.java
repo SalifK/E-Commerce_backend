@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Date;
 @Entity
@@ -14,14 +16,30 @@ public class Promotion {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     private String name;
-    private Date dateDebut;
-    private Date dateFin;
+    private LocalDateTime dateDebut;
+    private LocalDateTime dateFin;
     private int pourcentage;
  
     @OneToMany(mappedBy="Promotion")
     private Collection<Product> Product;
 
-	public Promotion(Date dateDebut, String name, Date dateFin, int pourcentage, Collection<Product> product) {
+	public Promotion() {
+		super();
+	}
+
+	
+
+	
+	
+	public Promotion(LocalDateTime dateDebut, String name, LocalDateTime dateFin, int pourcentage) {
+		super();
+		this.name = name;
+		this.dateDebut = dateDebut;
+		this.dateFin = dateFin;
+		this.pourcentage = pourcentage;
+		
+	}
+	public Promotion(LocalDateTime dateDebut, String name, LocalDateTime dateFin, int pourcentage, Collection<Product> product) {
 		super();
 		this.name = name;
 		this.dateDebut = dateDebut;
@@ -49,19 +67,19 @@ public class Promotion {
 		this.id = id;
 	}
 
-	public Date getDateDebut() {
+	public LocalDateTime getDateDebut() {
 		return dateDebut;
 	}
 
-	public void setDateDebut(Date dateDebut) {
+	public void setDateDebut(LocalDateTime dateDebut) {
 		this.dateDebut = dateDebut;
 	}
 
-	public Date getDateFin() {
+	public LocalDateTime getDateFin() {
 		return dateFin;
 	}
 
-	public void setDateFin(Date dateFin) {
+	public void setDateFin(LocalDateTime dateFin) {
 		this.dateFin = dateFin;
 	}
 

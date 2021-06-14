@@ -1,4 +1,10 @@
 package com.electro.Electronic.controllers;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.websocket.server.PathParam;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,17 +16,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.electro.Electronic.services.UserService;
+import com.electro.Electronic.services.CategorieService;
+import com.electro.Electronic.services.TVAService;
+import com.electro.Electronic.models.Categorie;
 @RestController
 
-@RequestMapping(path="api/user")
-public class UserController {
+@RequestMapping(path="api/tva")
+public class TVAController {
 
-	private final UserService userServ;
+	private final TVAService TVAServ;
 	
 	@Autowired
-	public UserController(UserService userServ) {
+	public TVAController(TVAService TVAServ) {
 		super();
-		this.userServ = userServ;
+		this.TVAServ = TVAServ;
 	}
+
+
 }

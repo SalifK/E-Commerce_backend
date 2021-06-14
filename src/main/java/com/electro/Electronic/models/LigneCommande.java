@@ -31,5 +31,10 @@ public class LigneCommande {
 	@ManyToOne
 	@JoinColumn(name="id_product", nullable=false) 
 	private Product Product;
+
+	public LigneCommande() {
+		super();
+	}
+	
 	
 }

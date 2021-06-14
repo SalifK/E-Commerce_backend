@@ -42,6 +42,9 @@ public class Employer {
 		this.adressePhysique = adressePhysique;
 		this.image = image;
 	}
+	public Employer() {
+		super();
+	}
 	public long getId() {
 		return id;
 	}

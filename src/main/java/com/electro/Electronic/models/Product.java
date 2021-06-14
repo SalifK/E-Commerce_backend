@@ -46,6 +46,11 @@ public class Product {
     private TVA TVA;/// a revoir 
 
 
+	public Product() {
+		super();
+	}
+
+
 	public Product(String reference, String name, String marque, String description, String image, String color,
 			float price, int quantity, Categorie categorie, Promotion promotion, TVA tva) {
 		super();

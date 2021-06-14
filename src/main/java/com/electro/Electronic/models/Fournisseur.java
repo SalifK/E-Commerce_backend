@@ -1,5 +1,5 @@
 package com.electro.Electronic.models;
-
+/*
 import java.util.Collection;
 import java.util.Date;
 
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
-//@Entity
+@Entity
 public class Fournisseur {
 
 	@Id
@@ -28,4 +28,4 @@ public class Fournisseur {
 	
 	
 	
-}
+}*/

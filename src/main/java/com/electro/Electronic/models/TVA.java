@@ -18,6 +18,14 @@ public class TVA {
     @OneToMany(mappedBy="TVA")
 	private Collection<Product> Product;
     
+    
+	public TVA() {
+		super();
+	}
+	public TVA( int pourcentage) {
+		super();
+		this.pourcentage = pourcentage;
+	}
 	public TVA(long id, int pourcentage) {
 		super();
 		this.id = id;
